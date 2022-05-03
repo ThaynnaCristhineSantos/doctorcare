@@ -9,6 +9,7 @@
   --headline-color: hsla(210, 11%, 15%, 1);
   --paragraph-color: hsla(210, 9%, 31%, 1);
   --brand-color: hsla(148, 23%, 89%, 1);
+  --brand-light-color: rgb(255, 255, 255);
 }
 
 header {
@@ -71,9 +72,53 @@ button {
 
 .stats {
   width: 327px;
-  height: 470px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
   margin-inline: auto;
 
+  background-color: var(--brand-light-color);
+  border: 1px, solid, var(--brand-light-color);
+  border-radius: 0.6rem;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.stat p {
+  margin: 0;
+}
+
+.stat h3 {
+  font-size: 4.8rem;
+  line-height: 6.24rem;
+  color: var(--headline-color);
+}
+
+.stat p {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+header img {
+  width: 26.4rem;
+  display: block;
+  margin-inline: auto;
+  object-position: 0 2rem;
+}
+
+header::before {
+  content: '';
+  width: 100vw;
+  height: 108rem;
   background-color: var(--brand-color);
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
