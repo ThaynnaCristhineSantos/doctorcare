@@ -1,3 +1,4 @@
+/*Geral*/
 * {
   margin: 0;
   box-sizing: border-box;
@@ -12,11 +13,36 @@
   --brand-light-color: rgb(255, 255, 255);
 }
 
-header {
+.wrapper {
   width: 37.5rem;
   margin-right: auto;
   margin-left: auto;
+}
+
+/* Header*/
+
+header {
   margin-top: 4.1rem;
+}
+
+header img {
+  width: 26.4rem;
+  display: block;
+  margin-inline: auto;
+  object-position: 0 2rem;
+}
+
+header::before {
+  content: '';
+  width: 100vw;
+  height: 108rem;
+  background-color: var(--brand-color);
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 body {
@@ -25,21 +51,21 @@ body {
   text-align: center;
 }
 
-h4 {
+header h4 {
   font-size: 16px;
   font-size: 1.4rem;
   color: var(--primary-color);
   margin-bottom: 1.6rem;
 }
 
-h1 {
+header h1 {
   font-size: 3.4rem;
   color: var(--headline-color);
   line-height: 130%;
   margin-bottom: 2.4rem;
 }
 
-p {
+header p {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 150%;
@@ -81,7 +107,6 @@ button {
   border: 1px, solid, var(--brand-light-color);
   border-radius: 0.6rem;
 
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,22 +128,15 @@ button {
   color: var(--primary-color);
 }
 
-header img {
-  width: 26.4rem;
-  display: block;
-  margin-inline: auto;
-  object-position: 0 2rem;
-}
+/* Navigation*/
 
-header::before {
-  content: '';
-  width: 100vw;
-  height: 108rem;
-  background-color: var(--brand-color);
-  display: block;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  padding-inline: 2.4rem;
+  padding-block: 1.6rem;
 
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  position: fixed;
 }
