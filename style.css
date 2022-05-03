@@ -8,6 +8,7 @@
   --primary-color: hsla(170, 100%, 26%, 1);
   --headline-color: hsla(210, 11%, 15%, 1);
   --paragraph-color: hsla(210, 9%, 31%, 1);
+  --brand-color: hsla(148, 23%, 89%, 1);
 }
 
 header {
@@ -66,4 +67,13 @@ button {
   gap: 1.6rem;
   margin-right: auto;
   margin-left: auto;
+}
+
+.stats {
+  width: 327px;
+  height: 470px;
+
+  margin-inline: auto;
+
+  background-color: var(--brand-color);
 }
