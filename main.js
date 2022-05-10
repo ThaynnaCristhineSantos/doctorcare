@@ -23,4 +23,7 @@ ScrollReveal({
 #homme .stats, 
 #services,
 #services homme,
-#services .card`);
+#services .card,
+#about,
+#about hearder,
+#about .content`);
