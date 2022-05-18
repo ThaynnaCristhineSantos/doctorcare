@@ -6,7 +6,9 @@ function onScroll() {
   showNavOnScroll()
   showBackToTopOnScroll()
   activateMenuAtCurrentSection(homme)
-  //activateMenuAtCurrentSection(services)
+  activateMenuAtCurrentSection(services)
+  activateMenuAtCurrentSection(about)
+  activateMenuAtCurrentSection(contact)
 }
 
 function activateMenuAtCurrentSection(section) {
@@ -42,13 +44,14 @@ function activateMenuAtCurrentSection(section) {
     sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine
 
   console.log(sectionBoundaries)
-
-  const menuElement = document.querySelector(
-    `.menu a [href*=${section.getAttribute()}]`
-  )
-
+  
+  const sectionId = section.getAttribute('id')
+  const menuElement = document
+  .querySelector(`.menu a[href*=${sectionId}]`)
+  
+  menuElement.classList.remove('active')
   if (sectionBoundaries) {
-    console.log('estou na seção HOMME')
+    menuElement.classList.add('active')
   }
 }
 
